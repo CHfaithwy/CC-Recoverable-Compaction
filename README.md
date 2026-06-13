@@ -1,8 +1,5 @@
 # Recoverable Compaction
 
-> 只公开 `Recoverable Compaction` 的设计说明与实现思路，不方便公开上游源码。
-
-## 这是什么
 
 `Recoverable Compaction` 是一个面向 Clow Code 类 Agent 的长上下文增强方案。让 Agent 在压缩上下文之后，仍然可以按需找回旧日志、旧报错、旧 `stack trace` 和子 Agent 的长输出。
 
@@ -51,7 +48,6 @@ recoverable store = 薄索引 + 正文归档
 
 ## 3. 核心数据结构
 
-当前实现已经落地了 3 个核心结构。
 
 ### 3.1 CompactBlock
 
